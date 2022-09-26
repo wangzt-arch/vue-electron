@@ -5,8 +5,9 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
-export default defineConfig((({mode}) => {
+export default defineConfig(({mode}) => {
   const config = loadEnv(mode, './')
+  console.log(config);
   return {
     plugins: [
       vue(), vueJsx()
@@ -38,4 +39,4 @@ export default defineConfig((({mode}) => {
       }
     }
   }
-}))
+})
