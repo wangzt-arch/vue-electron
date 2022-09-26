@@ -25,7 +25,7 @@ export default {
 
   },
   mounted() {
-
+    console.log('about start');
   },
   methods: {
 
