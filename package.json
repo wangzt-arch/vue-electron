@@ -1,5 +1,6 @@
 {
   "name": "vue3-template",
+  "author":"wzt",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
