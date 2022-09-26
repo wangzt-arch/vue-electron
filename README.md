@@ -1,34 +1,35 @@
 # vue3-template
 
-This template should help get you started developing with Vue 3 in Vite.
+快速构建vite+vue3项目
 
-## Recommended IDE Setup
+## 推荐IDE配置
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+VSCode + Volar
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## 项目开始
 
 ```sh
+git clone https://github.com/wangzt-arch/vue3-template.git
+git remote remove origin
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
+## 上传仓库
+```sh
+git remote add origin yourUrl
+git init
+git add .
+git commit -m "chore: first"
+git push origin master
+```
 
-### Compile and Minify for Production
+### 打包生产
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### 格式检查
 
 ```sh
 npm run lint
