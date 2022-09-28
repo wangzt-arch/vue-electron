@@ -5,11 +5,11 @@
   "main": "main.js",
   "scripts": {
     "dev": "vite",
+    "electron-dev": "electron .",
     "prod": "vite --mode production",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "electron:serve": "vite build & electron . "
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "axios": "^0.27.2",
