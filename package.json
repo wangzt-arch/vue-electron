@@ -1,13 +1,15 @@
 {
   "name": "vue3-template",
-  "author":"wzt",
+  "author": "wzt",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "dev": "vite",
-    "prod":"vite --mode production",
+    "prod": "vite --mode production",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "electron:serve": "vite build & electron . "
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -21,6 +23,7 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
+    "electron": "^21.0.0",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
