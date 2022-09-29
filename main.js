@@ -1,8 +1,10 @@
 // 控制应用生命周期和创建原生浏览器窗口的模组
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 const path = require('path')
 
+
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true; // 关闭控制台的警告
+Menu.setApplicationMenu(null) //隐藏菜单栏
 
 function createWindow() {
   // 创建浏览器窗口
@@ -26,7 +28,7 @@ function createWindow() {
 
 
   // 打开开发工具
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // 这段程序将会在 Electron 结束初始化

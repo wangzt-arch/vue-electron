@@ -1,11 +1,12 @@
 {
-  "name": "vue3-template",
+  "name": "electron-vue",
   "author": "wzt",
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
     "dev": "vite",
-    "electron-dev": "electron .",
+    "electron": "electron .",
+    "start": "concurrently -k \"npm run dev\" \"npm run electron\"",
     "prod": "vite --mode production",
     "build": "vite build",
     "preview": "vite preview --port 4173",
@@ -23,12 +24,14 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
+    "concurrently": "^7.4.0",
     "electron": "^21.0.0",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
     "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
-    "vite": "^3.0.9"
+    "vite": "^3.0.9",
+    "wait-on": "^6.0.1"
   }
 }
