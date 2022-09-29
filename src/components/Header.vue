@@ -6,16 +6,15 @@
       <RouterLink to="/jsx">jsx</RouterLink> -->
       <el-menu mode="horizontal" default-active="0" :ellipsis="false" @select="handleSelect">
         <el-menu-item index="0">
-          <template #title>Navigator Four</template>
+          首页
         </el-menu-item>
         <el-menu-item index="1">
-          <template #title>Navigator Four</template>
+          第二页
         </el-menu-item>
         <el-menu-item index="2">
-          <template #title>Navigator Four</template>
+          最后一页
         </el-menu-item>
       </el-menu>
-
     </div>
     <!-- <div class="header-right">
       <div class="header-right-icon">
@@ -55,8 +54,17 @@ export default {
 
   },
   methods: {
-    handleSelect() {
-
+    handleSelect(e) {
+      console.log(e);
+      if (e == 0) {
+        this.$router.push('./')
+      }
+      if (e == 1) {
+        this.$router.push('./about')
+      }
+      if (e == 2) {
+        this.$router.push('./jsx')
+      }
     }
   }
 };
