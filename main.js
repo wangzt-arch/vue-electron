@@ -11,6 +11,9 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    frame: false, //无边框
+    titleBarStyle: 'hidden',
+    titleBarOverlay: true,
     webPreferences: {
       // 书写渲染进程中的配置
       nodeIntegration: true, //开启true这一步很重要,目的是为了vue文件中可以引入node和electron相关的API
@@ -22,13 +25,12 @@ function createWindow() {
   // 加载 index.html
   // mainWindow.loadFile(path.resolve(__dirname, './dist/index.html')) // 新增
   mainWindow.loadURL('http://localhost:5173/') // 新增
+  mainWindow.webContents.openDevTools() // 打开开发工具
 
 
-
-
-
-  // 打开开发工具
-  mainWindow.webContents.openDevTools()
+  //子窗口
+  // const child = new BrowserWindow({ parent: mainWindow })
+  // child.show()
 }
 
 // 这段程序将会在 Electron 结束初始化

@@ -1,26 +1,26 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import Header from './components/Header.vue';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <div class="title">
-        标题
-      </div>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/jsx">jsx</RouterLink>
-      </nav>
+  <div class="wrapper">
+    <Header></Header>
+    <div class="router-view">
+      <RouterView />
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .wrapper {
   color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .router-view {
+    flex: 1;
+  }
 }
 </style>
